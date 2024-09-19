@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Library Management System</h1>
+
+    <div class="form-container">
+      <input type="text" id="bookName" placeholder="Book Name" required>
+      <input type="text" id="authorName" placeholder="Author Name" required>
+      <input type="text" id="isbn" placeholder="ISBN" required>
+      <input type="text" id="rackNumber" placeholder="Rack Number" required>
+      <button onclick="addBook()">Add Book</button>
+    </div>
+
+  
+    <div class="search-container">
+      <input type="text" id="searchBookName" placeholder="Search by Book Name" onkeyup="searchBook()">
+      <input type="text" id="searchAuthor" placeholder="Search by Author" onkeyup="searchBook()">
+      <input type="text" id="searchISBN" placeholder="Search by ISBN" onkeyup="searchBook()">
+    </div>
+
+    <div class="book-list-container">
+      <h2>Book List</h2>
+      <table id="bookTable">
+        <thead>
+          <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Rack Number</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="bookList"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
